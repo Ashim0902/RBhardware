@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+:root {
+  --headerclr: #222533;
+  --mainclr: #ffcb0f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  transition: 0.2s;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.head {
+  padding: 2rem 7%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--headerclr);
+  z-index: 10000;
+}
+
+#logo {
+  color: var(--mainclr);
+  font-size: 30px;
+}
+
+.nav a {
+  color: white;
+  font-size: 1.5rem;
+
+  margin-left: 1rem;
+}
+
+.nav a:hover {
+  color: var(--mainclr);
+}
+
+.icon-header div {
+  color: white;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.icon-header div:hover {
+  color: var(--mainclr);
+}
+
+#menu-bar {
+  display: none;
+}
+
+.nav.active {
+  top: 100%;
+}
+
+.search-form {
+  width: 50%;
+  position: absolute;
+  top: -110%;
+  right: 2rem;
+  transition: 0.2s;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--headerclr);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.search-form.active {
+  top: 110%;
+}
